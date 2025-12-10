@@ -1,4 +1,5 @@
 import 'package:architectures/Views/components/Text-widget.dart';
+import 'package:architectures/Views/source/Startings/onborading_screens/Code-resend.dart';
 import 'package:architectures/Views/source/Startings/onborading_screens/Onboarding-screen.dart';
 import 'package:architectures/Views/source/Startings/onborading_screens/figma2.dart';
 import 'package:architectures/Views/utills/constants/assets.dart';
@@ -29,7 +30,7 @@ class _ForgotPassword_figmaState extends State<ForgotPassword_figma> {
               TextWidgets(text: 'Forgot Password',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize: 20),),
             ],
           ),
-          SizedBox(height:30,),
+          SizedBox(height:40,),
           Padding(
             padding: const EdgeInsets.all(13.0),
             child: TextWidgets(text: 'Type your phone number',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:12),),
@@ -57,11 +58,16 @@ class _ForgotPassword_figmaState extends State<ForgotPassword_figma> {
           ),
           SizedBox(height:10,),
           Center(
-            child: Container(
-              decoration:BoxDecoration(borderRadius:BorderRadius.circular(18),color:Color(0xff3629B7)
+            child: InkWell(
+              onTap:(){
+                Navigator.push(context,MaterialPageRoute(builder: (context){return Code_Resend();}));
+              },
+              child: Container(
+                decoration:BoxDecoration(borderRadius:BorderRadius.circular(18),color:Color(0xff3629B7)
+                ),
+                height:44,width:295,
+                child:Center(child: TextWidgets(text: 'Send',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Colors.white),)),
               ),
-              height:44,width:295,
-              child:Center(child: TextWidgets(text: 'Send',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Colors.white),)),
             ),
           )
         ],
