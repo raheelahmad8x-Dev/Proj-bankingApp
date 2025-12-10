@@ -8,6 +8,7 @@ class FigmaClass2 extends StatefulWidget {
   @override
   State<FigmaClass2> createState() => _FigmaClass2State();
 }
+// hi there
 
 class _FigmaClass2State extends State<FigmaClass2> {
 
