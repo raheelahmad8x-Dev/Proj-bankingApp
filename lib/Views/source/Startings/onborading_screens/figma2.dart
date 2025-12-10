@@ -2,6 +2,8 @@ import 'package:architectures/Views/components/Text-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'forgot-password.dart';
+
 class FigmaClass2 extends StatefulWidget {
   const FigmaClass2({super.key});
 
@@ -145,6 +147,19 @@ class _FigmaClass2State extends State<FigmaClass2> {
                           ),
                         ),
                         Row(
+                            children: [
+                              Spacer(),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                                      return ForgotPassword_figma();
+                                    }));
+                                  },
+                                  child: Text('forgot password',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12,color:Color(0xffCACACA)),)),
+                              SizedBox(width:10,)
+                            ]
+                        ),
+                        Row(
                           children: [
                             InkWell(
                               onTap:(){},
@@ -162,6 +177,14 @@ class _FigmaClass2State extends State<FigmaClass2> {
                             TextWidgets(text: 'By Creating an account your agree\nto our Term and conditions',style:GoogleFonts.lato(fontWeight:FontWeight.w900,fontSize:11.99),)
                           ],
                         ),
+                        Center(child:Container(
+                          height:44,width:327,
+                          decoration:BoxDecoration(
+                              color:Color(0xff3629B7),
+                              borderRadius:BorderRadius.circular(18)
+                          ),
+                          child:Center(child:TextWidgets(text: 'Sign up',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
+                        ),)
                     
                     ],),
                   ),

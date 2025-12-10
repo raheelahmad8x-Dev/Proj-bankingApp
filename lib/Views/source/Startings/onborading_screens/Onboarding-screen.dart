@@ -1,5 +1,6 @@
 import 'package:architectures/Views/components/Text-widget.dart';
 import 'package:architectures/Views/source/Startings/onborading_screens/figma2.dart';
+import 'package:architectures/Views/source/Startings/onborading_screens/forgot-password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -130,7 +131,7 @@ class _FigmaAppState extends State<FigmaApp> {
                             child:TextFormField(
                               controller:n1,
                               decoration:InputDecoration(
-                                  hintText:'Text Input',
+                                  hintText:'Name',
                                   hintStyle: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:14,color:Color(0xffCACACA)),
                                   border:InputBorder.none
                               ),
@@ -161,7 +162,14 @@ class _FigmaAppState extends State<FigmaApp> {
                         ),
                         Row(
                             children: [
-                              Spacer(),Text('forgot password',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12,color:Color(0xffCACACA)),),
+                              Spacer(),
+                              InkWell(
+                                  onTap: (){
+                                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                                      return ForgotPassword_figma();
+                                    }));
+                                  },
+                                  child: Text('forgot password',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12,color:Color(0xffCACACA)),)),
                               SizedBox(width:10,)
                             ]
                         ),

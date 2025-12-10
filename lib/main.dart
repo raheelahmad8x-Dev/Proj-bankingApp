@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
-        body: ForgotPassword_figma(),
+        body: FigmaClass2(),
       ),
     );
   }
