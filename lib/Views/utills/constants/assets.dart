@@ -8,4 +8,5 @@ class Appdata
   // app icons
   static String homeIcons='assets/homeicons.png';
   static IconData profileIcons=Icons.handshake;
+  static IconData backicon=Icons.arrow_back_ios_new_rounded;
 }
