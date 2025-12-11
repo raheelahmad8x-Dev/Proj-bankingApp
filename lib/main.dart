@@ -1,7 +1,7 @@
 import 'package:architectures/Views/source/Authentications_screens/Login_screen/login.dart';
 import 'package:architectures/Views/source/Startings/onborading_screens/Onboarding-screen.dart';
-import 'package:architectures/Views/source/Startings/onborading_screens/figma2.dart';
-import 'package:architectures/Views/source/Startings/onborading_screens/forgot-password.dart';
+import 'package:architectures/Views/source/Startings/Figma_E_Banking/figma2.dart';
+import 'package:architectures/Views/source/Startings/Figma_E_Banking/forgot-password.dart';
 import 'package:flutter/material.dart';
 
 void main() {

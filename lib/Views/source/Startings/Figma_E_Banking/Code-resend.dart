@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/Text-widget.dart';
 import '../../../utills/constants/assets.dart';
-import 'Onboarding-screen.dart';
+import '../onborading_screens/Onboarding-screen.dart';
 
 class Code_Resend extends StatefulWidget {
   const Code_Resend({super.key});
