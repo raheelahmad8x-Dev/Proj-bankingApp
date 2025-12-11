@@ -1,3 +1,4 @@
+import 'package:architectures/Views/source/Startings/Figma_E_Banking/change-password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,6 +18,7 @@ class _Code_ResendState extends State<Code_Resend> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body:Column(
         crossAxisAlignment:CrossAxisAlignment.start,
         children: [
@@ -73,11 +75,22 @@ class _Code_ResendState extends State<Code_Resend> {
 
           Padding(
             padding: const EdgeInsets.all(13.0),
-            child: Container(
-              height:44,width:double.infinity,
-              decoration:BoxDecoration(borderRadius:BorderRadius.circular(18),color:Color(0xff3629B7),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context)
+                    {
+                      return ChangePassword();
+                    }
+                )
+                );
+              },
+              child: Container(
+                height:44,width:double.infinity,
+                decoration:BoxDecoration(borderRadius:BorderRadius.circular(18),color:Color(0xff3629B7),
+                ),
+                child:Center(child:TextWidgets(text: 'Change Password',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
               ),
-              child:Center(child:TextWidgets(text: 'Change Password',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
             ),
           )
         ],

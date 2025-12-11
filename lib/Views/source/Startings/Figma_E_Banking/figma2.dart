@@ -134,9 +134,8 @@ class _FigmaClass2State extends State<FigmaClass2> {
                               controller:n3,
                               decoration:InputDecoration(
                                 suffixIcon:IconButton(onPressed: (){
-
                                   setState(() {
-                                    _obscurePassword= !_obscurePassword;
+                                    _obscurePassword=!_obscurePassword;
                                   });
                                 }, icon:Icon(_obscurePassword?Icons.visibility_off:Icons.visibility)),
                                   hintText: 'password',
