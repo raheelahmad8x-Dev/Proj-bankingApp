@@ -16,13 +16,15 @@ class _Successfully_ChangedState extends State<Successfully_Changed> {
     return Scaffold(
       body:Column(
         children: [
-            Container(
-              height:216,width:327,
-            decoration:BoxDecoration(
-              //color:Colors.red,
-                image:DecorationImage(image: AssetImage('assets/icons/homeicons/suuces.jpg')),
+            Center(
+              child: Container(
+                height:216,width:327,
+              decoration:BoxDecoration(
+                //color:Colors.red,
+                  image:DecorationImage(image: AssetImage('assets/images/3.png')),
+              ),
+                        ),
             ),
-          ),
         ],
       ),
     );
