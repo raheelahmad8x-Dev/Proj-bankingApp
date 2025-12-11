@@ -75,7 +75,7 @@ class _FigmaClass2State extends State<FigmaClass2> {
                         Center(child:
                         Container(
                           height:165,width:213,
-                          decoration:BoxDecoration(image:DecorationImage(image: AssetImage('assets/images/2.png'))
+                          decoration:BoxDecoration(image:DecorationImage(image:AssetImage('assets/images/2.png'))
                           ),
                         ),
                         ),

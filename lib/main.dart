@@ -1,7 +1,6 @@
-import 'package:architectures/Views/source/Authentications_screens/Login_screen/login.dart';
-import 'package:architectures/Views/source/Startings/onborading_screens/Onboarding-screen.dart';
-import 'package:architectures/Views/source/Startings/Figma_E_Banking/figma2.dart';
-import 'package:architectures/Views/source/Startings/Figma_E_Banking/forgot-password.dart';
+
+import 'package:architectures/Views/source/Startings/Figma_E_Banking/changing-successfully.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
-        body: FigmaClass2(),
+        body: Successfully_Changed(),
       ),
     );
   }

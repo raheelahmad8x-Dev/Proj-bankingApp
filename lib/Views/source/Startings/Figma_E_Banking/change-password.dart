@@ -1,3 +1,4 @@
+import 'package:architectures/Views/source/Startings/Figma_E_Banking/changing-successfully.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../components/Text-widget.dart';
@@ -87,7 +88,15 @@ class _ChangePasswordState extends State<ChangePassword> {
           Center(
             child:
             InkWell(
-              onTap:(){},
+              onTap:(){
+                Navigator.push(context,MaterialPageRoute(
+                    builder: (context)
+                    {
+                      return Successfully_Changed();
+                    }
+                    )
+                );
+              },
               child: Container(
                 height: 44,width:295,
                 decoration:BoxDecoration(color:Color(0xff3629B7),borderRadius:BorderRadius.circular(18)
