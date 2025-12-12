@@ -15,9 +15,8 @@ class _HomeFigmaState extends State<HomeFigma> {
         children: [
          Container(
            height:double.infinity,width:double.infinity,
-           color:Color(0xff3629B7),
-         )
-          
+           color:Colors.red,
+         ),
         ],
       ),
     );
