@@ -1,5 +1,7 @@
 
+import 'package:architectures/Views/source/App_views/home_screens/Figma-home-screen.dart';
 import 'package:architectures/Views/source/Authentications_screens/Signup_screen/Figma_E_Banking/changing-successfully.dart';
+import 'package:architectures/Views/source/Authentications_screens/Signup_screen/Figma_E_Banking/figma2.dart';
 
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
-        body: Successfully_Changed(),
+        body:HomeFigma()
       ),
     );
   }

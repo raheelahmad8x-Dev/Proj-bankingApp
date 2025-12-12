@@ -49,7 +49,7 @@ class _Successfully_ChangedState extends State<Successfully_Changed> {
               decoration:BoxDecoration(
                   color:Color(0xff3629B7),
                   borderRadius:BorderRadius.circular(18)),
-                child:Center(child:TextWidgets(text: 'Ok',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
+                  child:Center(child:TextWidgets(text:'Ok',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
               ),
             ),
           )
