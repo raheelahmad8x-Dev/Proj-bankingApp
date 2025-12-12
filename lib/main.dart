@@ -1,5 +1,5 @@
 
-import 'package:architectures/Views/source/Startings/Figma_E_Banking/changing-successfully.dart';
+import 'package:architectures/Views/source/Authentications_screens/Signup_screen/Figma_E_Banking/changing-successfully.dart';
 
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:architectures/Views/components/Text-widget.dart';
-import 'package:architectures/Views/source/Startings/Figma_E_Banking/Code-resend.dart';
+import 'package:architectures/Views/source/Authentications_screens/Signup_screen/Figma_E_Banking/Code-resend.dart';
 import 'package:architectures/Views/source/Startings/onborading_screens/Onboarding-screen.dart';
-import 'package:architectures/Views/source/Startings/Figma_E_Banking/figma2.dart';
+import 'package:architectures/Views/source/Authentications_screens/Signup_screen/Figma_E_Banking/figma2.dart';
 import 'package:architectures/Views/utills/constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

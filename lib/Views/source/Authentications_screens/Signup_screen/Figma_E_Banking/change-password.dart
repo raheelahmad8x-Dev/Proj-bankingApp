@@ -1,9 +1,9 @@
-import 'package:architectures/Views/source/Startings/Figma_E_Banking/changing-successfully.dart';
+import 'package:architectures/Views/source/Authentications_screens/Signup_screen/Figma_E_Banking/changing-successfully.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../components/Text-widget.dart';
-import '../../../utills/constants/assets.dart';
-import '../onborading_screens/Onboarding-screen.dart';
+import '../../../../components/Text-widget.dart';
+import '../../../../utills/constants/assets.dart';
+import '../../../Startings/onborading_screens/Onboarding-screen.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({super.key});
