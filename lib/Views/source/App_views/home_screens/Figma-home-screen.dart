@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 
-class HomeFigma extends StatefulWidget {
-  const HomeFigma({super.key});
+class HomeScreen_figma extends StatefulWidget {
+  const HomeScreen_figma({super.key});
 
   @override
-  State<HomeFigma> createState() => _HomeFigmaState();
+  State<HomeScreen_figma> createState() => _HomeScreen_figmaState();
 }
 
-class _HomeFigmaState extends State<HomeFigma> {
+class _HomeScreen_figmaState extends State<HomeScreen_figma> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Column(
-        children: [
-         Container(
-           height:double.infinity,width:double.infinity,
-           color:Colors.red,
-         ),
-        ],
+      body:
+      Column(children[
+        Expanded(
+          child: Container(
+              height:double.infinity,width:double.infinity,
+              color:Color(0xff3629B7),
+            ),
+        ),
+        ]
       ),
+
     );
   }
 }
