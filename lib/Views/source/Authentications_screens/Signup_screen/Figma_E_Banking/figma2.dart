@@ -20,7 +20,8 @@ class _FigmaClass2State extends State<FigmaClass2> {
   bool _obscurePassword = true;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar:
+    return Scaffold(
+      appBar:
       AppBar(
         backgroundColor:Color(0xff3629B7),
         title:Text('9:09',style:GoogleFonts.poppins(color:Colors.white,fontSize: 12),),
@@ -55,7 +56,7 @@ class _FigmaClass2State extends State<FigmaClass2> {
                       )
                   ),
                   child:SingleChildScrollView(
-                    child:   Column(
+                    child:Column(
                       crossAxisAlignment:CrossAxisAlignment.start,
                       children: [
                       Padding(
