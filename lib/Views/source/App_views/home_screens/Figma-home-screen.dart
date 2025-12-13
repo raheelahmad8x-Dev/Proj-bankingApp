@@ -24,6 +24,7 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
     Model(name: 'Transaction Report', image:'assets/icons/homeicons/file1.png'),
     Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png'),
   ];
+  int index=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
