@@ -1,4 +1,5 @@
 import 'package:architectures/Views/components/Text-widget.dart';
+import 'package:architectures/Views/source/App_views/home_screens/Figma-home-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -177,13 +178,25 @@ class _FigmaClass2State extends State<FigmaClass2> {
                             TextWidgets(text: 'By Creating an account your agree\nto our Term and conditions',style:GoogleFonts.lato(fontWeight:FontWeight.w900,fontSize:11.99),)
                           ],
                         ),
-                        Center(child:Container(
-                          height:44,width:327,
-                          decoration:BoxDecoration(
-                              color:Color(0xff3629B7),
-                              borderRadius:BorderRadius.circular(18)
+                        Center(child:InkWell(
+                          onTap: ()
+                          {
+                            Navigator.push(context,MaterialPageRoute(
+                                builder: (context)
+                            {
+                              return
+                              HomeScreen_figma();
+                            })
+                            );
+                          },
+                          child: Container(
+                            height:44,width:327,
+                            decoration:BoxDecoration(
+                                color:Color(0xff3629B7),
+                                borderRadius:BorderRadius.circular(18)
+                            ),
+                            child:Center(child:TextWidgets(text: 'Sign up',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
                           ),
-                          child:Center(child:TextWidgets(text: 'Sign up',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:16,color:Color(0xffFFFFFF)),),),
                         ),)
                     
                     ],),

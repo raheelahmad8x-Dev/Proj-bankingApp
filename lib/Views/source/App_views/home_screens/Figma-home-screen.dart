@@ -1,3 +1,4 @@
+import 'package:architectures/model/Figma-grid-model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,6 +12,18 @@ class HomeScreen_figma extends StatefulWidget {
 }
 
 class _HomeScreen_figmaState extends State<HomeScreen_figma> {
+
+  List<Model> data=[
+    Model(name: 'Account and card', image:'assets/icons/homeicons/wallet'),
+    Model(name: 'Transfer', image:'assets/icons/homeicons/sync.png'),
+    Model(name: 'withdraw', image:'assets/icons/homeicons/Group.pn'),
+    Model(name: 'Mobile pre-paid', image:'assets/icons/homeicons/banking.png'),
+    Model(name: 'Pay the bill', image:'assets/icons/homeicons/reciept.png'),
+    Model(name: 'save online', image:'assets/icons/homeicons/pig.png'),
+    Model(name: 'Credit Card', image:'assets/icons/homeicons/credit2.png'),
+    Model(name: 'Transaction Report', image:'assets/icons/homeicons/file1.png'),
+    Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png'),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,49 +72,26 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                         child:SingleChildScrollView(
                           child: Column(
                             children: [
-                              SizedBox(height:20,),
-                              Stack(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top:40.0),
-                                    child: Center(child:Container(height:195,width:227,
-                                    decoration:BoxDecoration(color:Color(0xff5655B9),borderRadius:BorderRadius.circular(22)),
-                                    )),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 22.0),
-                                    child: Center(child:Container(height:198,width:287,decoration:BoxDecoration(
-                                        color:Color(0xffFF4267),borderRadius:BorderRadius.circular(22))),),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 3.0),
-                                    child: Center(child:Container(height:200,width:341,
-                                    decoration:BoxDecoration(color:Color(0xffDAEBFF),borderRadius:BorderRadius.circular(22)),
+                              Container(
+                                height: 327,width:421,
+                                decoration:BoxDecoration(
+                                    image:DecorationImage(image:AssetImage('assets/images/cards.png'),fit:BoxFit.cover)),
+                              ),
+                              GridView.builder(
+                                  itemCount:data.length,
+                                  gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                                  itemBuilder:(context,index)
+                                  {
+                                    return Container(
                                       child:Column(
-                                        crossAxisAlignment:CrossAxisAlignment.start,
                                         children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(14.0),
-                                            child: TextWidgets(text: 'John Smiths',style:GoogleFonts.poppins(fontWeight:FontWeight.w400,fontSize:24),),
-                                          ),
-                                          SizedBox(height:30,), 
-
-                                          Padding(
-                                            padding: const EdgeInsets.all(14.0),
-                                            child: TextWidgets(text: 'Amazon Platinum',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:14),),
-                                          )
+                                          CircleAvatar(backgroundImage:AssetImage(data[index].image.toString()),),
+                                          Text(data[index].name.toString())
                                         ],
                                       ),
-                                    )
-                                    ),
-                                  ),
-                                ],
-                              )
-                              // Container(
-                              //   height: 327,width:221,
-                              //   decoration:BoxDecoration(
-                              //       image:DecorationImage(image:AssetImage('assets/images/cards.png'))),
-                              // )
+                                    );
+
+                                  })
                             ],
                           ),
                         ),
