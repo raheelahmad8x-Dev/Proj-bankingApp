@@ -85,6 +85,11 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                                             child: TextWidgets(text: 'John Smiths',style:GoogleFonts.poppins(fontWeight:FontWeight.w400,fontSize:24),),
                                           ),
                                           SizedBox(height:30,), 
+
+                                          Padding(
+                                            padding: const EdgeInsets.all(14.0),
+                                            child: TextWidgets(text: 'Amazon Platinum',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:14),),
+                                          )
                                         ],
                                       ),
                                     )
