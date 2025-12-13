@@ -73,7 +73,7 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                           child: Column(
                             children: [
                               Container(
-                                height: 327,width:421,
+                                height: 227,width:321,
                                 decoration:BoxDecoration(
                                     image:DecorationImage(image:AssetImage('assets/images/cards.png'),fit:BoxFit.cover)),
                               ),
@@ -91,7 +91,7 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                                       ),
                                     );
 
-                                  })
+                                  }),
                             ],
                           ),
                         ),
