@@ -24,31 +24,12 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
     Model(name: 'Transaction Report', image:'assets/icons/homeicons/file1.png'),
     Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png'),
   ];
-  int index=0;
-  final screens=[Text('data'),
-  ];
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:BottomNavigationBar(
-          currentIndex:index,
-      onTap: (value){
-        setState(() {
 
-        });
-      },
-      backgroundColor: Colors.black,
-      selectedItemColor:Color(0xff3629B7),
-      unselectedItemColor: Colors.grey,
-      unselectedLabelStyle: GoogleFonts.poppins(color:Colors.pink),
-      items:[
-        BottomNavigationBarItem(icon: Icon(Icons.home_filled),label:'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Search'),
-        BottomNavigationBarItem(icon: Icon(Icons.mail_outline_rounded),label: 'Messages'),
-        BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings',
-        ),
-      ]
-      ),
         appBar:
         AppBar(
           backgroundColor:Color(0xff3629B7),
@@ -65,7 +46,7 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
       body:
       Column(
         children: [
-          screens.elementAt(index),
+
           Expanded(
               child:Container(
             height:double.infinity,width:double.infinity,
@@ -85,7 +66,7 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                         ],
                       ),
                       Container(
-                        width:double.infinity,height:800,
+                        width:double.infinity,height:450,
                         decoration:BoxDecoration(
                           color:Color(0xffFFFFFF),
                           borderRadius:BorderRadius.only(
@@ -135,6 +116,49 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
         ],
       )
 
+    );
+  }
+}
+
+
+class BottomNav extends StatefulWidget {
+   BottomNav({super.key});
+
+  @override
+  State<BottomNav> createState() => _BottomNavState();
+}
+
+class _BottomNavState extends State<BottomNav> {
+  @override
+  final screens=[HomeScreen_figma(),Text('data'),Text('2'),Text('3')
+  ];
+  int index=0;
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+        bottomNavigationBar:BottomNavigationBar(
+            currentIndex:index,
+            onTap: (value){
+              setState(() {
+                index=value;
+                setState(() {
+
+                });
+              });
+            },
+            backgroundColor: Colors.black,
+            selectedItemColor:Color(0xff3629B7),
+            unselectedItemColor: Colors.grey,
+            unselectedLabelStyle: GoogleFonts.poppins(color:Colors.pink),
+            items:[
+              BottomNavigationBarItem(icon: Icon(Icons.home_filled),label:'Home'),
+              BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Search'),
+              BottomNavigationBarItem(icon: Icon(Icons.mail_outline_rounded),label: 'Messages'),
+              BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings',
+              ),
+            ]
+        ),
+      body:screens.elementAt(index),
     );
   }
 }
