@@ -64,7 +64,6 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
           ],
         ),
       body:
-
       Column(
         children: [
           screens.elementAt(index),
