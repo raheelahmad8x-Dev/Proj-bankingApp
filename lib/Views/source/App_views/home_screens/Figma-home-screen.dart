@@ -162,3 +162,19 @@ class _BottomNavState extends State<BottomNav> {
     );
   }
 }
+
+class SearchScr extends StatefulWidget {
+  const SearchScr({super.key});
+
+  @override
+  State<SearchScr> createState() => _SearchScrState();
+}
+
+class _SearchScrState extends State<SearchScr> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+    );
+  }
+}
