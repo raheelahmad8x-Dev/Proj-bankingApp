@@ -129,10 +129,10 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  @override
   final screens=[HomeScreen_figma(),SearchScr(),Text('2'),Text('3')
   ];
   int index=0;
+  @override
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,40 +163,4 @@ class _BottomNavState extends State<BottomNav> {
   }
 }
 
-class SearchScr extends StatefulWidget {
-  const SearchScr({super.key});
 
-  @override
-  State<SearchScr> createState() => _SearchScrState();
-}
-
-class _SearchScrState extends State<SearchScr> {
-  @override
-
-  List<Model> Search=
-  [
-    Model(name: 'Branch', image: 'assets/icons/homeicons/GroupSearch.png',subTitle:'Search for Branch'),
-    Model(name: 'Branch', image: 'assets/icons/homeicons/sood.png',subTitle:'Search for Branch'),
-    Model(name: 'Branch', image: 'assets/icons/homeicons/exhangeRate.png',subTitle:'Search for Branch'),
-    Model(name: 'Branch', image: 'assets/icons/homeicons/exhchange.png',subTitle:'Search for Branch'),
-  ];
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body:Column(
-        children:
-        [
-          ListView.builder(
-              itemCount:Search.length,
-              itemBuilder: (context,index)
-              {
-                return Container(
-                  width:double.infinity,
-                  height:110,
-                  decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all()),
-                );
-              })
-        ],
-      ),
-    );
-  }
-}
