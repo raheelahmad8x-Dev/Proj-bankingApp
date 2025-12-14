@@ -14,15 +14,15 @@ class HomeScreen_figma extends StatefulWidget {
 class _HomeScreen_figmaState extends State<HomeScreen_figma> {
 
   List<Model> data=[
-    Model(name: 'Account and card', image:'assets/icons/homeicons/wallet.png'),
-    Model(name: 'Transfer', image:'assets/icons/homeicons/sync.png'),
-    Model(name: 'withdraw', image:'assets/icons/homeicons/Group.png'),
-    Model(name: 'Mobile pre-paid', image:'assets/icons/homeicons/banking.png'),
-    Model(name: 'Pay the bill', image:'assets/icons/homeicons/reciept.png'),
-    Model(name: 'save online', image:'assets/icons/homeicons/pig.png'),
-    Model(name: 'Credit Card', image:'assets/icons/homeicons/credit2.png'),
-    Model(name: 'Transaction Report', image:'assets/icons/homeicons/file1.png'),
-    Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png'),
+    Model(name: 'Account and card', image:'assets/icons/homeicons/wallet.png',subTitle:''),
+    Model(name: 'Transfer', image:'assets/icons/homeicons/sync.png',subTitle: ''),
+    Model(name: 'withdraw', image:'assets/icons/homeicons/Group.png',subTitle: ''),
+    Model(name: 'Mobile pre-paid', image:'assets/icons/homeicons/banking.png',subTitle: ''),
+    Model(name: 'Pay the bill', image:'assets/icons/homeicons/reciept.png',subTitle: ''),
+    Model(name: 'save online', image:'assets/icons/homeicons/pig.png',subTitle: ''),
+    Model(name: 'Credit Card', image:'assets/icons/homeicons/credit2.png',subTitle: ''),
+    Model(name: 'Transaction Report', image:'assets/icons/homeicons/file1.png',subTitle: ''),
+    Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png',subTitle: ''),
   ];
 
 
@@ -130,7 +130,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   @override
-  final screens=[HomeScreen_figma(),Text('data'),Text('2'),Text('3')
+  final screens=[HomeScreen_figma(),SearchScr(),Text('2'),Text('3')
   ];
   int index=0;
 
@@ -172,9 +172,31 @@ class SearchScr extends StatefulWidget {
 
 class _SearchScrState extends State<SearchScr> {
   @override
+
+  List<Model> Search=
+  [
+    Model(name: 'Branch', image: 'assets/icons/homeicons/GroupSearch.png',subTitle:'Search for Branch'),
+    Model(name: 'Branch', image: 'assets/icons/homeicons/sood.png',subTitle:'Search for Branch'),
+    Model(name: 'Branch', image: 'assets/icons/homeicons/exhangeRate.png',subTitle:'Search for Branch'),
+    Model(name: 'Branch', image: 'assets/icons/homeicons/exhchange.png',subTitle:'Search for Branch'),
+  ];
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body:Column(
+        children:
+        [
+          ListView.builder(
+              itemCount:Search.length,
+              itemBuilder: (context,index)
+              {
+                return Container(
+                  width:double.infinity,
+                  height:110,
+                  decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all()),
+                );
+              })
+        ],
+      ),
     );
   }
 }
