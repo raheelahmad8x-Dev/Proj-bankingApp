@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/Text-widget.dart';
+import '../search_screens/Figma-Search.dart';
 
 class HomeScreen_figma extends StatefulWidget {
   const HomeScreen_figma({super.key});

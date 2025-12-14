@@ -1,4 +1,5 @@
 import 'package:architectures/Views/source/App_views/home_screens/Figma-home-screen.dart';
+import 'package:architectures/Views/utills/constants/Radio-button.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
-        body:BottomNav()
+        body:Dialog()
       ),
     );
   }
