@@ -14,9 +14,9 @@ class HomeScreen_figma extends StatefulWidget {
 class _HomeScreen_figmaState extends State<HomeScreen_figma> {
 
   List<Model> data=[
-    Model(name: 'Account and card', image:'assets/icons/homeicons/wallet'),
+    Model(name: 'Account and card', image:'assets/icons/homeicons/wallet.png'),
     Model(name: 'Transfer', image:'assets/icons/homeicons/sync.png'),
-    Model(name: 'withdraw', image:'assets/icons/homeicons/Group.pn'),
+    Model(name: 'withdraw', image:'assets/icons/homeicons/Group.png'),
     Model(name: 'Mobile pre-paid', image:'assets/icons/homeicons/banking.png'),
     Model(name: 'Pay the bill', image:'assets/icons/homeicons/reciept.png'),
     Model(name: 'save online', image:'assets/icons/homeicons/pig.png'),
@@ -25,9 +25,31 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
     Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png'),
   ];
   int index=0;
+  final screens=[
+    HomeScreen_figma(),Text('data'),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar:BottomNavigationBar(
+      currentIndex:index,
+      onTap: (value){
+        setState(() {
+
+        });
+      },
+      backgroundColor: Colors.black,
+      selectedItemColor:Color(0xff3629B7),
+      unselectedItemColor: Colors.grey,
+      unselectedLabelStyle: GoogleFonts.poppins(color:Colors.pink),
+      items:[
+        BottomNavigationBarItem(icon: Icon(Icons.home_filled),label:'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Search'),
+        BottomNavigationBarItem(icon: Icon(Icons.mail_outline_rounded),label: 'Messages'),
+        BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings',
+        ),
+      ]
+      ),
         appBar:
         AppBar(
           backgroundColor:Color(0xff3629B7),
@@ -41,8 +63,11 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
             SizedBox(width:10,)
           ],
         ),
-      body: Column(
+      body:
+
+      Column(
         children: [
+          screens.elementAt(index),
           Expanded(
               child:Container(
             height:double.infinity,width:double.infinity,
@@ -62,7 +87,7 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                         ],
                       ),
                       Container(
-                        width:double.infinity,height:508,
+                        width:double.infinity,height:800,
                         decoration:BoxDecoration(
                           color:Color(0xffFFFFFF),
                           borderRadius:BorderRadius.only(
@@ -78,21 +103,28 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                                 decoration:BoxDecoration(
                                     image:DecorationImage(image:AssetImage('assets/images/cards.png'),fit:BoxFit.cover)),
                               ),
-                              GridView.builder(
-                                  itemCount:data.length,
-                                  gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
-                                  itemBuilder:(context,index)
-                                  {
-                                    return Container(
-                                      child:Column(
-                                        children: [
-                                          CircleAvatar(backgroundImage:AssetImage(data[index].image.toString()),),
-                                          Text(data[index].name.toString())
-                                        ],
-                                      ),
-                                    );
+                              SizedBox(height:500,
+                                child: GridView.builder(
 
-                                  }),
+                                    itemCount:data.length,
+                                    gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:10),
+                                    itemBuilder:(context,index)
+                                    {
+                                      return Container(
+                                        child:Padding(
+                                          padding: const EdgeInsets.all(18.0),
+                                          child: Column(
+                                            mainAxisSize:MainAxisSize.min,
+                                            children: [
+                                              CircleAvatar(backgroundImage:AssetImage(data[index].image.toString(),),),
+                                              Text(data[index].name.toString(),style:GoogleFonts.poppins(fontSize:12,fontWeight:FontWeight.w500),)
+                                            ],
+                                          ),
+                                        ),
+                                      );
+
+                                    }),
+                              ),
                             ],
                           ),
                         ),
