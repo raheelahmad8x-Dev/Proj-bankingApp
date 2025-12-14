@@ -25,14 +25,13 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
     Model(name: 'Beneficiary', image:'assets/icons/homeicons/contacts.png'),
   ];
   int index=0;
-  final screens=[
-    HomeScreen_figma(),Text('data'),
+  final screens=[Text('data'),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar:BottomNavigationBar(
-      currentIndex:index,
+          currentIndex:index,
       onTap: (value){
         setState(() {
 
