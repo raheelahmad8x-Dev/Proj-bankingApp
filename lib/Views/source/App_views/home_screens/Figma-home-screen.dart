@@ -192,7 +192,7 @@ class _SearchScrState extends State<SearchScr> {
             child: Container(
               width:double.infinity,
               height:70,
-              decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all()),
+              decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all(color:Colors.grey)),
               child:ListTile(
                 title:TextWidgets(text:'Branch',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:16),),
                 subtitle:TextWidgets(text:'Search for Branch',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12),),
