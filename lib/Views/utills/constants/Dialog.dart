@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Dialog extends StatefulWidget {
   const Dialog({super.key});
@@ -25,29 +26,36 @@ class _HomeClassState extends State<HomeClass> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar:AppBar(
+        title:Text('Dialog Box',style:GoogleFonts.poppins(fontSize:25),),
+      ),
       body:Center(child:
-      TextButton(onPressed: (){
-        showDialog(context: context,
-            builder:(BuildContext context)
-            {
-              return AlertDialog(
-                title:  Row(
-                  children: [
-                    Text('Messages'),
-                    Spacer(),
-                    IconButton(onPressed: (){}, icon:Icon(Icons.cancel))
+      Container(
+        decoration:BoxDecoration(color:Colors.blue,borderRadius:BorderRadius.circular(22)),
+        child: TextButton(
+            onPressed: (){
+          showDialog(context: context,
+              builder:(BuildContext context)
+              {
+                return AlertDialog(
+                  title:  Row(
+                    children: [
+                      Text('Messages'),
+                      Spacer(),
+                      IconButton(onPressed: (){}, icon:Icon(Icons.cancel))
+                    ],
+                  ),
+                  content:Text('Lets chill together'),
+                  actions: [
+                    TextButton(onPressed: (){
+                      Navigator.pop(context,);
+                    }, child:Text('No')),
+                    TextButton(onPressed: (){}, child:Text('Yes')),
                   ],
-                ),
-                content:Text('Go to hell'),
-                actions: [
-                  TextButton(onPressed: (){
-                    Navigator.pop(context,);
-                  }, child:Text('No')),
-                  TextButton(onPressed: (){}, child:Text('Yes')),
-                ],
-              );
-            });
-      }, child:Text('data')),
+                );
+              });
+        }, child:Text('Notifications',style:GoogleFonts.poppins(color:Colors.black),)),
+      ),
       ),
     );
   }
