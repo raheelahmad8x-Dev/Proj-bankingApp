@@ -130,7 +130,7 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  final screens=[HomeScreen_figma(),SearchScr(),Text('2'),Text('3')
+  final screens=[HomeScreen_figma(),SearchScr(),Text('3')
   ];
   int index=0;
   @override
@@ -163,5 +163,52 @@ class _BottomNavState extends State<BottomNav> {
     );
   }
 }
+class SearchScr extends StatefulWidget {
+  const SearchScr({super.key});
 
+  @override
+  State<SearchScr> createState() => _SearchScrState();
+}
+
+class _SearchScrState extends State<SearchScr> {
+  List<Model> Search=
+  [
+    Model(name: 'Branch', image: 'assets/icons/homeicons/GroupSearch.png',subTitle:'Search for Branch'),
+    Model(name: 'Interest', image: 'assets/icons/homeicons/sood.png',subTitle:'Search for Branch'),
+    Model(name: 'Exchange rate', image: 'assets/icons/homeicons/exhangeRate.png',subTitle:'Search for Branch'),
+    Model(name: 'Exchange', image: 'assets/icons/homeicons/exhchange.png',subTitle:'Search for Branch'),
+  ];
+
+  @override
+
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Column(
+        children:
+        [
+          Padding(
+            padding: const EdgeInsets.all(13.0),
+            child: Container(
+              width:double.infinity,
+              height:70,
+              decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all()),
+              child:ListTile(
+                title:TextWidgets(text:'Branch',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:16),),
+                subtitle:TextWidgets(text:'Search for Branch',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12),),
+                trailing:Image.asset('assets/icons/homeicons/GroupSearch.png'),
+              ),
+            ),
+          )
+          // ListView.builder(
+          //     itemCount:Search.length,
+          //     itemBuilder: (context,index)
+          //     {
+          //       return ;
+          //     })
+        ],
+      ),
+    );
+  }
+}
 

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:Scaffold(
-        body:ToggleButton()
+        body:SearchScr()
       ),
     );
   }
