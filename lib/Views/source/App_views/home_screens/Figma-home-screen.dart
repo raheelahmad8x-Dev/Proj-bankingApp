@@ -79,31 +79,34 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                           child: Column(
                             children: [
                               Container(
-                                height: 227,width:321,
+                                height: 217,width:321,
                                 decoration:BoxDecoration(
                                     image:DecorationImage(image:AssetImage('assets/images/cards.png'),fit:BoxFit.cover)),
                               ),
                               SizedBox(height:500,
-                                child: GridView.builder(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(18.0),
+                                  child: GridView.builder(
 
-                                    itemCount:data.length,
-                                    gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:10),
-                                    itemBuilder:(context,index)
-                                    {
-                                      return Container(
-                                        child:Padding(
-                                          padding: const EdgeInsets.all(18.0),
-                                          child: Column(
-                                            mainAxisSize:MainAxisSize.min,
-                                            children: [
-                                              CircleAvatar(backgroundImage:AssetImage(data[index].image.toString(),),),
-                                              Text(data[index].name.toString(),style:GoogleFonts.poppins(fontSize:12,fontWeight:FontWeight.w500),)
-                                            ],
+                                      itemCount:data.length,
+                                      gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:10),
+                                      itemBuilder:(context,index)
+                                      {
+                                        return Container(
+                                          child:Padding(
+                                            padding: const EdgeInsets.all(40.0),
+                                            child: Column(
+                                              mainAxisSize:MainAxisSize.min,
+                                              children: [
+                                                CircleAvatar(backgroundImage:AssetImage(data[index].image.toString(),),),
+                                                Text(data[index].name.toString(),style:GoogleFonts.poppins(fontSize:12,fontWeight:FontWeight.w500),)
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      );
+                                        );
 
-                                    }),
+                                      }),
+                                ),
                               ),
                             ],
                           ),
