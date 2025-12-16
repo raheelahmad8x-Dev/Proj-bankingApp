@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../components/Text-widget.dart';
+import '../../../utills/constants/assets.dart';
+import '../../Startings/onborading_screens/Onboarding-screen.dart';
 import '../search_screens/Figma-Search.dart';
 
 class HomeScreen_figma extends StatefulWidget {
@@ -187,30 +189,52 @@ class _SearchScrState extends State<SearchScr> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Column(
-        children:
-        [
-          Padding(
-            padding: const EdgeInsets.all(13.0),
-            child: Container(
-              width:double.infinity,
-              height:70,
-              decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all(color:Colors.grey)),
-              child:ListTile(
-                title:TextWidgets(text:'Branch',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:16),),
-                subtitle:TextWidgets(text:'Search for Branch',style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12),),
-                trailing:Image.asset('assets/icons/homeicons/GroupSearch.png'),
-              ),
-            ),
-          )
-          // ListView.builder(
-          //     itemCount:Search.length,
-          //     itemBuilder: (context,index)
-          //     {
-          //       return ;
-          //     })
-        ],
-      ),
+      body: SizedBox(
+          child: ListView.builder(
+              itemCount:Search.length,
+              itemBuilder: (context,index)
+              {
+                return Padding(
+                  padding: const EdgeInsets.all(13.0),
+                  child: InkWell(
+                    // onTap:(){
+                    //   if (index == 0) {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (_) =>BranchScreen()),
+                    //     );
+                    //   } else if (index == 1) {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (_) =>InterestScreen()),
+                    //     );
+                    //   } else if (index == 2) {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (_) =>ExchangeRateScreen()),
+                    //     );
+                    //   } else if (index == 3) {
+                    //     Navigator.push(
+                    //       context,
+                    //       MaterialPageRoute(builder: (_) =>ExchangeScreen()),
+                    //     );
+                    //   }
+                    // },
+                    child: Container(
+                      width:double.infinity,
+                      height:70,
+                      decoration:BoxDecoration(borderRadius:BorderRadius.circular(12),border:Border.all(color:Colors.grey)),
+                      child:ListTile(
+                        title:TextWidgets(text:Search[index].name.toString(),style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:16),),
+                        subtitle:TextWidgets(text:Search[index].subTitle.toString(),style:GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:12),),
+                        trailing:Image.asset(Search[index].image.toString()),
+                      ),
+                    ),
+                  ),
+                ) ;
+              })
+                ),
+
     );
   }
 }
