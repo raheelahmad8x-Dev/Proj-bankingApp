@@ -190,8 +190,8 @@ class _SearchScrState extends State<SearchScr> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        leading:IconButton(onPressed: (){Navigator.pop(context,BottomNav());}, icon:Icon(Icons.arrow_back_ios_new_rounded)),
-        title:TextWidgets(text: 'Search',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:20),),
+        leading:IconButton(onPressed: (){Navigator.pop(context,BottomNav());},icon:Icon(Icons.arrow_back_ios_new_rounded)),
+        title:TextWidgets(text:'Search',style:GoogleFonts.poppins(fontWeight:FontWeight.w600,fontSize:20),),
       ),
       body: SizedBox(
           child: ListView.builder(
