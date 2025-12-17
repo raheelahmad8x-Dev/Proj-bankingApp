@@ -189,6 +189,9 @@ class _SearchScrState extends State<SearchScr> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        leading: ,
+      ),
       body: SizedBox(
           child: ListView.builder(
               itemCount:Search.length,
@@ -197,29 +200,30 @@ class _SearchScrState extends State<SearchScr> {
                 return Padding(
                   padding: const EdgeInsets.all(13.0),
                   child: InkWell(
-                    // onTap:(){
-                    //   if (index == 0) {
-                    //     Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(builder: (_) =>BranchScreen()),
-                    //     );
-                    //   } else if (index == 1) {
-                    //     Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(builder: (_) =>InterestScreen()),
-                    //     );
-                    //   } else if (index == 2) {
-                    //     Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(builder: (_) =>ExchangeRateScreen()),
-                    //     );
-                    //   } else if (index == 3) {
-                    //     Navigator.push(
-                    //       context,
-                    //       MaterialPageRoute(builder: (_) =>ExchangeScreen()),
-                    //     );
-                    //   }
-                    // },
+                     onTap:(){
+                       if (index == 0) {
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (_) =>BranchFigma()),
+                         );
+                       }
+                         //   else if (index == 1) {
+                     //     Navigator.push(
+                     //       context,
+                     //       MaterialPageRoute(builder: (_) =>InterestScreen()),
+                     //     );
+                     //   } else if (index == 2) {
+                     //     Navigator.push(
+                     //       context,
+                     //       MaterialPageRoute(builder: (_) =>ExchangeRateScreen()),
+                     //     );
+                     //   } else if (index == 3) {
+                     //     Navigator.push(
+                     //       context,
+                     //       MaterialPageRoute(builder: (_) =>ExchangeScreen()),
+                     //     );
+                     //   }
+                    },
                     child: Container(
                       width:double.infinity,
                       height:70,
