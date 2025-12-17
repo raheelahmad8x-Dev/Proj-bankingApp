@@ -205,15 +205,16 @@ class _SearchScrState extends State<SearchScr> {
                        if (index == 0) {
                          Navigator.push(
                            context,
-                           MaterialPageRoute(builder: (_) =>BranchFigma()),
+                           MaterialPageRoute(builder:(_) =>BranchFigma()),
                          );
                        }
-                         //   else if (index == 1) {
-                     //     Navigator.push(
-                     //       context,
-                     //       MaterialPageRoute(builder: (_) =>InterestScreen()),
-                     //     );
-                     //   } else if (index == 2) {
+                            else if (index == 1) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder:(_) =>InterestScreen()),
+                          );
+                        }
+                     //     else if (index == 2) {
                      //     Navigator.push(
                      //       context,
                      //       MaterialPageRoute(builder: (_) =>ExchangeRateScreen()),

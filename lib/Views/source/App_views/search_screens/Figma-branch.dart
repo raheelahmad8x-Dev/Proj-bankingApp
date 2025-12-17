@@ -90,14 +90,35 @@ class InterestScreen extends StatefulWidget {
 }
 
 class _InterestScreenState extends State<InterestScreen> {
+  
+  List<Model> inter=[
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
+    Model(name: 'Corporate customers', image: '2m', subTitle: '5.50%'),
+
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Column(
-        children: [
-          
-        ],
+      appBar:AppBar(
+        leading:IconButton(onPressed: (){Navigator.pop(context,);}, icon:Icon(Icons.arrow_back_ios_new_rounded)),
+        title:TextWidgets(text: 'Interest rate',style:GoogleFonts.poppins(fontSize:20,fontWeight:FontWeight.w600),),
       ),
+      body:SizedBox(
+        child:GridView.builder(
+            itemCount:inter.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:15),
+            itemBuilder: (context,index)
+            {
+              Row(children: [
+                SizedBox(width:10,),
+                TextWidgets(text: inter[index].name.toString()),
+                Spacer(),
+                TextWidgets(text: inter[index].image.toString()),
+                Spacer(),
+                TextWidgets(text: inter[index].subTitle.toString()),
+              ],);
+            }),
+      )
     );
   }
 }
