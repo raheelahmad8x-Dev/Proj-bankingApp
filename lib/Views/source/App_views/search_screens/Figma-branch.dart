@@ -107,16 +107,13 @@ class _InterestScreenState extends State<InterestScreen> {
         child:GridView.builder(
             itemCount:inter.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:15),
-            itemBuilder: (context,index)
+            itemBuilder:(context,index)
             {
-              Row(children: [
-                SizedBox(width:10,),
-                TextWidgets(text: inter[index].name.toString()),
-                Spacer(),
-                TextWidgets(text: inter[index].image.toString()),
-                Spacer(),
-                TextWidgets(text: inter[index].subTitle.toString()),
-              ],);
+              ListTile(
+                leading:TextWidgets(text: inter[index].name.toString()),
+                title:TextWidgets(text: inter[index].subTitle.toString()),
+                trailing:TextWidgets(text: inter[index].image.toString()),
+              );
             }),
       )
     );

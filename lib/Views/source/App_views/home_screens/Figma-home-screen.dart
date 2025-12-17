@@ -32,7 +32,6 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         appBar:
         AppBar(
           backgroundColor:Color(0xff3629B7),
@@ -49,7 +48,6 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
       body:
       Column(
         children: [
-
           Expanded(
               child:Container(
             height:double.infinity,width:double.infinity,
@@ -89,7 +87,6 @@ class _HomeScreen_figmaState extends State<HomeScreen_figma> {
                                 child: Padding(
                                   padding: const EdgeInsets.all(18.0),
                                   child: GridView.builder(
-
                                       itemCount:data.length,
                                       gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:10),
                                       itemBuilder:(context,index)
@@ -179,9 +176,9 @@ class _SearchScrState extends State<SearchScr> {
   List<Model> Search=
   [
     Model(name: 'Branch', image: 'assets/icons/homeicons/GroupSearch.png',subTitle:'Search for Branch'),
-    Model(name: 'Interest', image: 'assets/icons/homeicons/sood.png',subTitle:'Search for Branch'),
-    Model(name: 'Exchange rate', image: 'assets/icons/homeicons/exhangeRate.png',subTitle:'Search for Branch'),
-    Model(name: 'Exchange', image: 'assets/icons/homeicons/exhchange.png',subTitle:'Search for Branch'),
+    Model(name: 'Interest', image: 'assets/icons/homeicons/sood.png',subTitle:'Search for Interest rate'),
+    Model(name: 'Exchange rate', image: 'assets/icons/homeicons/exhangeRate.png',subTitle:'Search for exchange rate'),
+    Model(name: 'Exchange', image: 'assets/icons/homeicons/exhchange.png',subTitle:'Exchange amount of money'),
   ];
 
   @override
@@ -239,7 +236,7 @@ class _SearchScrState extends State<SearchScr> {
                   ),
                 ) ;
               })
-                ),
+      ),
 
     );
   }
