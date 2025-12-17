@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../components/Text-widget.dart';
 import '../../../utills/constants/assets.dart';
 import '../../Startings/onborading_screens/Onboarding-screen.dart';
-import '../search_screens/Figma-Search.dart';
+import '../search_screens/Figma-branch.dart';
 
 class HomeScreen_figma extends StatefulWidget {
   const HomeScreen_figma({super.key});
