@@ -93,7 +93,17 @@ class _InterestScreenState extends State<InterestScreen> {
   
   List<Model> inter=[
     Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
-    Model(name: 'Corporate customers', image: '2m', subTitle: '5.50%'),
+    Model(name: 'Corporate Customers', image: '2m', subTitle: '5.50%'),
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
+    Model(name: 'Corporate Customers', image: '6m', subTitle: '2.50%'),
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
+    Model(name: 'Corporate Customers', image: '8m', subTitle: '6.50%'),
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
+    Model(name: 'Corporate Customers', image: '7m', subTitle: '6.80%'),
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.80%'),
+    Model(name: 'Individual Customers', image: '12m', subTitle: '5.90%'),
+    Model(name: 'Individual Customers', image: '1m', subTitle: '4.80%'),
 
   ];
   @override
@@ -104,19 +114,20 @@ class _InterestScreenState extends State<InterestScreen> {
         title:TextWidgets(text: 'Interest rate',style:GoogleFonts.poppins(fontSize:20,fontWeight:FontWeight.w600),),
       ),
       body:SizedBox(
-        child:GridView.builder(
+        child:ListView.builder(
             itemCount:inter.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing:15),
             itemBuilder:(context,index)
-            {
+            { return
               ListTile(
                 leading:TextWidgets(text: inter[index].name.toString()),
-                title:TextWidgets(text: inter[index].subTitle.toString()),
-                trailing:TextWidgets(text: inter[index].image.toString()),
+                title:TextWidgets(text: inter[index].image.toString()),
+                trailing:TextWidgets(text: inter[index].subTitle.toString()),
               );
             }),
       )
     );
   }
 }
+
+//
 

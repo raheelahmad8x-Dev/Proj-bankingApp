@@ -185,7 +185,7 @@ class _FigmaClass2State extends State<FigmaClass2> {
                                 builder: (context)
                             {
                               return
-                              HomeScreen_figma();
+                              BottomNav();
                             })
                             );
                           },
