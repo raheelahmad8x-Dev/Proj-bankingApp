@@ -139,9 +139,9 @@ class ExchangeRateScr extends StatefulWidget {
 }
 
 class _ExchangeRateScrState extends State<ExchangeRateScr> {
-  List<Model> inter=[
-    Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
-    Model(name: 'Corporate Customers', image: '2m', subTitle: '5.50%'),
+  List<Model> exchangerr=[
+    Model(name: 'Individual Customers', image: 'assets/images/VietnamFlag.png', subTitle: '4.50%'),
+    Model(name: 'Corporate Customers', image: 'assets/icons/homeicons/NI_Flag.png', subTitle: '5.50%'),
     Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
     Model(name: 'Corporate Customers', image: '6m', subTitle: '2.50%'),
     Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
@@ -159,17 +159,17 @@ class _ExchangeRateScrState extends State<ExchangeRateScr> {
     return Scaffold(
       appBar:AppBar(
         leading:IconButton(onPressed: (){Navigator.pop(context,);}, icon:Icon(Icons.arrow_back_ios_new_rounded)),
-        title:TextWidgets(text: 'Interest rate',style:GoogleFonts.poppins(fontSize:20,fontWeight:FontWeight.w600),),
+        title:TextWidgets(text: 'Exchange rate',style:GoogleFonts.poppins(fontSize:20,fontWeight:FontWeight.w600),),
       ),
       body:SizedBox(
         child:ListView.builder(
-            itemCount:inter.length,
+            itemCount:exchangerr.length,
             itemBuilder:(context,index)
             { return
               ListTile(
-                leading:TextWidgets(text: inter[index].name.toString()),
-                title:TextWidgets(text: inter[index].image.toString()),
-                trailing:TextWidgets(text: inter[index].subTitle.toString()),
+                leading:CircleAvatar(backgroundImage: AssetImage(exchangerr[index].image.toString()),),
+                title:TextWidgets(text: exchangerr[index].name.toString()),
+                trailing:TextWidgets(text: exchangerr[index].subTitle.toString()),
               );
             }),
       ),
