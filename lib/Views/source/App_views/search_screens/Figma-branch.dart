@@ -140,7 +140,7 @@ class ExchangeRateScr extends StatefulWidget {
 
 class _ExchangeRateScrState extends State<ExchangeRateScr> {
   List<Model> exchangerr=[
-    Model(name: 'Individual Customers', image: 'assets/images/VietnamFlag.png', subTitle: '4.50%'),
+    Model(name: 'Individual Customers', image: 'assets/icons/homeicons/VietnamFlag.png', subTitle: '4.50%'),
     Model(name: 'Corporate Customers', image: 'assets/icons/homeicons/NI_Flag.png', subTitle: '5.50%'),
     Model(name: 'Individual Customers', image: '1m', subTitle: '4.50%'),
     Model(name: 'Corporate Customers', image: '6m', subTitle: '2.50%'),
